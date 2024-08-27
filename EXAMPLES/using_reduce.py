@@ -25,3 +25,6 @@ print("result is", result)
 # join + upper case
 result = reduce(add, map(str.upper, strings), "")  # same, but make strings upper case
 print("result is", result)
+
+result = "".join(s.upper() for s in strings)
+print(f"{result = }")

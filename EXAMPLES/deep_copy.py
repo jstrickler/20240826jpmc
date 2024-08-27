@@ -6,7 +6,8 @@ data = [
 ]
 
 d1 = data # Bind d1 to same object as data
-d2 = list(data) # Make shallow copy of data and store in d2
+d2 = list(data) # Make shallow copy of data and store in d2    d2 = data[::]
+d2 = data[::]   # slice of everything
 d3 = copy.deepcopy(data) # Make deep copy of data and store in d3
 
 d1.append("d1")  # Append to d1 (same as appending to data)

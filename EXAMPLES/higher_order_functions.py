@@ -9,6 +9,8 @@ def process_list(alist, func):  # Define a function that accepts a list and a pa
         new_list.append(func(item))  # Call the callback function on one item of the passed-in list
     return new_list
 
+# new_list = [func(item) for item in alist]
+
 f1 = process_list(fruits, str.upper)  # Call process_list() with str.upper as the callback
 print(f"f1: {f1}\n")
 

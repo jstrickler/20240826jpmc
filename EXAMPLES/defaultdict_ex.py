@@ -20,6 +20,8 @@ fruit_info = defaultdict(list)
 
 for fruit in fruits:
     first_letter = fruit[0]
+    # if first_letter not in fruit_info:
+    #     fruit_info[first_letter] = []
     fruit_info[first_letter].append(fruit)
 
 for letter, fruits in sorted(fruit_info.items()):

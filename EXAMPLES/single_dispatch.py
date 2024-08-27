@@ -16,11 +16,11 @@ def add_number(number, list_object):  # define function to be called
 
 @add_number.register(int)
 @add_number.register(float)
-def _(number, list_object): # define handler for numeric types
+def add_number_type(number, list_object): # define handler for numeric types
     list_object.append(number)
 
 @add_number.register(bool)
-def _(number, list_object):
+def add_bool(number, list_object):
     list_object.append(int(number))
 
 @add_number.register(type(None))
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     for arg_type, func in add_number.registry.items():
         # show functions for each registered type
-        print(f"{arg_type!s:20} {func}")
+        print(f"{arg_type!s:20} {func} {func.__name__}")
 
     print(f"sum(x): {sum(x)}")  # every element is a number
     

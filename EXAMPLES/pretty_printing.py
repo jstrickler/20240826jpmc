@@ -1,4 +1,4 @@
-from pprint import pprint
+from pprint import pprint, pformat
 
 struct = {  # nested data structure
     'epsilon': [
@@ -35,3 +35,9 @@ print()
 
 print('With pprint (underscore_numbers=True):')
 pprint(struct, underscore_numbers=True)  # Put underscores in large numbers for readability
+
+s = pformat(struct)
+print(s)
+print(f"{s = }")  # uses repr() not str()
+
+
