@@ -1,12 +1,13 @@
 
 
+# coroutine (generator) factory
 def coroutine():  # Define a coroutine function
     in_value = ''
     while True:
         # Yield gets the result of send() AND provides the next value
         in_value = yield in_value.upper()  
         
-        print('in_value:', in_value)
+        # print('in_value:', in_value)
 
 
 c = coroutine()  # Create instance of coroutine
