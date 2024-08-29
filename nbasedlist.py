@@ -9,13 +9,13 @@ class NBasedList(MutableSequence):
     def __getitem__(self, index):
         return self._items[index - self._base]
 
-    def __setitem__(self, index, value):
+    def __setitem__(self, index, value):  # x[index] = value
         self._items[index - self._base] = value
 
-    def __delitem__(self, index):
+    def __delitem__(self, index):  # del x
         del self._items[index - self._base]
     
-    def __len__(self):
+    def __len__(self):  # len(x)
         return len(self._items)
 
     def insert(self, index, value):
