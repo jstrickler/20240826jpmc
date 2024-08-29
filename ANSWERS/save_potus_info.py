@@ -1,6 +1,6 @@
 import csv
 import pickle
-from pres_tuple import President
+from prestuple import President
 
 presidents = []
 with open('../DATA/presidents.csv') as presidents_in:
@@ -9,10 +9,10 @@ with open('../DATA/presidents.csv') as presidents_in:
         president = President(*row)
         presidents.append(president)
 
-
 with open('potus.pkl','wb') as POTUS:
     pickle.dump(presidents,POTUS)
 
-# test for Abraham Lincoln
-p = presidents[15]
-print(p.firstname, p.lastname, p.party)
+if __name__ == "__main__":
+    # test for Abraham Lincoln
+    p = presidents[15]
+    print(p.firstname, p.lastname, p.party)
